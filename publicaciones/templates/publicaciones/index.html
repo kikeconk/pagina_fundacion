@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="{{ idioma_actual }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundación Poco a Poco</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; color: #333; }
+        .navbar-brand { font-weight: bold; color: #2c3e50; }
+        .hero-section { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 60px 0; text-align: center; }
+        .card { border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">POCOAPOCO FOUNDATION</a>
+            <div class="d-flex ms-auto">
+                {% for lang in idiomas %}
+                    <a href="/{{ lang.codigo }}/" class="btn btn-sm {% if idioma_actual == lang.codigo %}btn-primary{% else %}btn-outline-secondary{% endif %} me-1">
+                        {{ lang.nombre }}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Preservando las Lenguas Indígenas</h1>
+            <p class="lead">Relatos vivos, saberes ancestrales e infancia</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                
+                {% if publicaciones %}
+                    {% for pub in publicaciones %}
+                        <div class="card p-4 mb-4">
+                            <h2 class="h3 border-bottom pb-2 text-primary fw-bold">{{ pub.titulo }}</h2>
+                            <p class="lead" style="white-space: pre-line; text-align: justify; font-size: 1.1rem; line-height: 1.8;">
+                                {{ pub.contenido }}
+                            </p>
+                            
+                            {% if pub.url_video %}
+                                <div class="mt-4">
+                                    <h4 class="h5 mb-3 fw-bold text-secondary">Multimedia: Audiolibro en Línea</h4>
+                                    <div class="video-container">
+                                        <iframe src="https://www.youtube.com/embed/9TtS6uONd0Y" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="alert alert-info text-center">
+                        No hay publicaciones disponibles para este idioma en este momento.
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Fundación Poco a Poco. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

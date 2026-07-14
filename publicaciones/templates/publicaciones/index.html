@@ -32,7 +32,7 @@
     <header class="hero-section">
         <div class="container">
             <h1 class="display-4 fw-bold">Preservando las Lenguas Indígenas</h1>
-            <p class="lead">Relatos vivos, saberes ancestrales e infancia</p>
+            <p class="lead">Mitología y saberes ancestrales para la historia oral y la memoria histórica</p>
         </div>
     </header>
 
@@ -77,40 +77,123 @@
 </body>
 </html>
 
-<section style="max-width: 600px; margin: 40px auto; padding: 20px; font-family: Arial, sans-serif; background: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-    <h2 style="text-align: center; color: #333; margin-bottom: 20px;">Contáctanos</h2>
-    
-    <form action="https://formsubmit.co/info@datapocoapoco.org" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
-        <input type="hidden" name="_captcha" value="false">
-        
-        <div>
-            <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #555;">Nombre</label>
-            <input type="text" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+{% if idioma_cod == 'en' %}
+    <section style="max-width: 600px; margin: 40px auto; padding: 20px; font-family: Arial, sans-serif; background: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <h2 style="text-align: center; color: #333; margin-bottom: 20px;">Contact Us</h2>
+        <form action="https://formsubmit.co/info@datapocoapoco.org" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+            <input type="hidden" name="_captcha" value="false">
+            <div>
+                <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #555;">Name</label>
+                <input type="text" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            <div>
+                <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #555;">Email Address</label>
+                <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            <div>
+                <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #555;">Message</label>
+                <textarea name="message" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; resize: vertical;"></textarea>
+            </div>
+            <button type="submit" style="background-color: #2b7a78; color: white; padding: 12px; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; font-weight: bold; transition: background 0.3s;">
+                Send Message
+            </button>
+        </form>
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
+        <div style="text-align: center; color: #666;">
+            <p style="margin-bottom: 5px;">Would you prefer to write to us directly from your email?</p>
+            <p style="font-size: 18px; font-weight: bold; margin: 0;">
+                📧 <a href="mailto:info@datapocoapoco.org" style="color: #2b7a78; text-decoration: none;">info@datapocoapoco.org</a>
+            </p>
         </div>
-        
-        <div>
-            <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #555;">Correo Electrónico</label>
-            <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
-        </div>
-        
-        <div>
-            <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #555;">Mensaje</label>
-            <textarea name="message" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; resize: vertical;"></textarea>
-        </div>
-        
-        <button type="submit" style="background-color: #2b7a78; color: white; padding: 12px; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; font-weight: bold; transition: background 0.3s;">
-            Enviar Mensaje
-        </button>
-    </form>
+    </section>
 
-    <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
+{% elif idioma_cod == 'fr' %}
+    <section style="max-width: 600px; margin: 40px auto; padding: 20px; font-family: Arial, sans-serif; background: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <h2 style="text-align: center; color: #333; margin-bottom: 20px;">Contactez-nous</h2>
+        <form action="https://formsubmit.co/info@datapocoapoco.org" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+            <input type="hidden" name="_captcha" value="false">
+            <div>
+                <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #555;">Nom</label>
+                <input type="text" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            <div>
+                <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #555;">Adresse e-mail</label>
+                <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            <div>
+                <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #555;">Message</label>
+                <textarea name="message" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; resize: vertical;"></textarea>
+            </div>
+            <button type="submit" style="background-color: #2b7a78; color: white; padding: 12px; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; font-weight: bold; transition: background 0.3s;">
+                Envoyer le message
+            </button>
+        </form>
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
+        <div style="text-align: center; color: #666;">
+            <p style="margin-bottom: 5px;">Vous préférez nous écrire directement depuis votre messagerie ?</p>
+            <p style="font-size: 18px; font-weight: bold; margin: 0;">
+                📧 <a href="mailto:info@datapocoapoco.org" style="color: #2b7a78; text-decoration: none;">info@datapocoapoco.org</a>
+            </p>
+        </div>
+    </section>
 
-    <div style="text-align: center; color: #666;">
-        <p style="margin-bottom: 5px;">¿Prefieres escribirnos directamente desde tu correo?</p>
-        <p style="font-size: 18px; font-weight: bold; margin: 0;">
-            📧 <a href="mailto:info@datapocoapoco.org" style="color: #2b7a78; text-decoration: none;">
-                info@datapocoapoco.org
-            </a>
-        </p>
-    </div>
-</section>
+{% elif idioma_cod == 'it' %}
+    <section style="max-width: 600px; margin: 40px auto; padding: 20px; font-family: Arial, sans-serif; background: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <h2 style="text-align: center; color: #333; margin-bottom: 20px;">Contattaci</h2>
+        <form action="https://formsubmit.co/info@datapocoapoco.org" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+            <input type="hidden" name="_captcha" value="false">
+            <div>
+                <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #555;">Nome</label>
+                <input type="text" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            <div>
+                <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #555;">Indirizzo e-mail</label>
+                <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            <div>
+                <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #555;">Messaggio</label>
+                <textarea name="message" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; resize: vertical;"></textarea>
+            </div>
+            <button type="submit" style="background-color: #2b7a78; color: white; padding: 12px; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; font-weight: bold; transition: background 0.3s;">
+                Invia il messaggio
+            </button>
+        </form>
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
+        <div style="text-align: center; color: #666;">
+            <p style="margin-bottom: 5px;">Preferisci scriverci direttamente dalla tua e-mail?</p>
+            <p style="font-size: 18px; font-weight: bold; margin: 0;">
+                📧 <a href="mailto:info@datapocoapoco.org" style="color: #2b7a78; text-decoration: none;">info@datapocoapoco.org</a>
+            </p>
+        </div>
+    </section>
+
+{% else %}
+    <section style="max-width: 600px; margin: 40px auto; padding: 20px; font-family: Arial, sans-serif; background: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <h2 style="text-align: center; color: #333; margin-bottom: 20px;">Contáctanos</h2>
+        <form action="https://formsubmit.co/info@datapocoapoco.org" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+            <input type="hidden" name="_captcha" value="false">
+            <div>
+                <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #555;">Nombre</label>
+                <input type="text" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            <div>
+                <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #555;">Correo Electrónico</label>
+                <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            <div>
+                <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #555;">Mensaje</label>
+                <textarea name="message" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; resize: vertical;"></textarea>
+            </div>
+            <button type="submit" style="background-color: #2b7a78; color: white; padding: 12px; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; font-weight: bold; transition: background 0.3s;">
+                Enviar Mensaje
+            </button>
+        </form>
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
+        <div style="text-align: center; color: #666;">
+            <p style="margin-bottom: 5px;">¿Prefieres escribirnos directamente desde tu correo?</p>
+            <p style="font-size: 18px; font-weight: bold; margin: 0;">
+                📧 <a href="mailto:info@datapocoapoco.org" style="color: #2b7a78; text-decoration: none;">info@datapocoapoco.org</a>
+            </p>
+        </div>
+    </section>
+{% endif %}

@@ -146,19 +146,19 @@
 {% if idioma_cod == 'en' %}
     <section style="max-width: 600px; margin: 40px auto; padding: 20px; font-family: Arial, sans-serif; background: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
         <h2 style="text-align: center; color: #333; margin-bottom: 20px;">Contact Us</h2>
-        <form action="https://formsubmit.co/info@datapocoapoco.org" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+        <form action="https://formsubmit.co/datapocoapoco@gmail.com" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
             <input type="hidden" name="_captcha" value="false">
+
+            <input type="hidden" name="_next" value="https://datapocoapoco.org">
+            <input type="hidden" name="_registry" value="true">
+            
             <div>
                 <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #555;">Name</label>
                 <input type="text" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
             </div>
             <div>
                 <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #555;">Email Address</label>
-                <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
-            </div>
-            <div>
-                <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #555;">Message</label>
-                <textarea name="message" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; resize: vertical;"></textarea>
+                <<textarea name="message" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; resize: vertical;"></textarea>
             </div>
             <button type="submit" style="background-color: #2b7a78; color: white; padding: 12px; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; font-weight: bold; transition: background 0.3s;">
                 Send Message
@@ -168,11 +168,11 @@
         <div style="text-align: center; color: #666;">
             <p style="margin-bottom: 5px;">Would you prefer to write to us directly from your email?</p>
             <p style="font-size: 18px; font-weight: bold; margin: 0;">
-                📧 <a href="mailto:info@datapocoapoco.org" style="color: #2b7a78; text-decoration: none;">info@datapocoapoco.org</a>
+                📧 <a href="mailto:datapocoapoco@gmail.com" style="color: #2b7a78; text-decoration: none;">datapocoapoco@gmail.com</a>
             </p>
         </div>
     </section>
-
+    
 {% elif idioma_cod == 'fr' %}
     <section style="max-width: 600px; margin: 40px auto; padding: 20px; font-family: Arial, sans-serif; background: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
         <h2 style="text-align: center; color: #333; margin-bottom: 20px;">Contactez-nous</h2>

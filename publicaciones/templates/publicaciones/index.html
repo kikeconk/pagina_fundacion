@@ -115,13 +115,18 @@
                             </p>
                             
                             {% if pub.url_video %}
-                                <div class="mt-4">
-                                    <h4 class="h5 mb-3 fw-bold text-secondary">Multimedia: Audiolibro en Línea</h4>
-                                    <div class="video-container">
-                                        <iframe src="https://www.youtube.com/embed/9TtS6uONd0Y" allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                            {% endif %}
+                                <div class="mt-4" style="text-align: center; padding: 20px; background-color: #fdfaf6; border-radius: 8px; border: 1px solid #f3e5d8;">
+                                    <h4 class="h5 mb-2 fw-bold text-secondary" style="font-family: 'Georgia', serif;">📚 Multimedia: Audiolibro en Línea</h4>
+                                    <p style="font-family: 'Georgia', serif; color: #666; font-size: 0.95rem; margin-bottom: 15px;">
+                                        Mi pueblo murui. Audiolibro infantil en lengua uitoto murui en nuestro canal de YouTube.
+                                    </p>
+        
+                                    <a href="{{ pub.url_video }}" target="_blank" rel="noopener noreferrer" 
+                                        style="display: inline-flex; align-items: center; justify-content: center; background-color: #c0392b; color: white; padding: 10px 20px; text-          decoration: none; font-weight: bold; border-radius: 5px; font-size: 1rem; box-shadow: 0 3px 6px rgba(0,0,0,0.1); transition: background-color 0.3s, transform 0.2s;">
+                                       <span style="font-size: 1.1em; margin-right: 8px;">▶</span> Ver Audiolibro en YouTube
+                                    </a>
+                        </div>
+                {% endif %}
                         </div>
                     {% endfor %}
                 {% else %}
